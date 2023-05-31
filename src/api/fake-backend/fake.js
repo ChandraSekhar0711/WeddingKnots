@@ -1,0 +1,7 @@
+const fake = [
+    {
+
+    }
+]
+
+export {fake};
