@@ -1,4 +1,35 @@
-.image{
-    max-width: 500px;
-    min-height: 300px;
+.root{
+    
 }
+.formContainer {
+    height:70vh
+}
+
+.formGroup {
+  margin-top: 50px;
+}
+
+.formGroup > * {
+  margin: 15px;
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.button {
+  margin-top: 50px;
+  width: 50%;
+  position: relative;
+  float: right;
+}
+
+.icon{
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 15px;
+  color: #b8b8b8;
+}
+
+

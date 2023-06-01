@@ -7,7 +7,7 @@ export function Collection() {
     const cards = fake;
     console.log(cards);
     return <>
-        <div className={`row justify-content-center`}>
+        <div className={`row justify-content-center ${s.root}`}>
             {cards.map((card) => {
                 return (
                     <div className={s.card_container} key={card.id}>

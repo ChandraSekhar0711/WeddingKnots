@@ -1,6 +1,12 @@
 .root{
     display: flex;
     height: 100%;
+    background-image: url("../../../src/assets/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+   
 }
 .logoTop{
     fill: #0d6efd;
@@ -22,20 +28,18 @@
 }
 
 .leftSection{
-    flex: 3;
+    padding: 20px;
+    flex: 4;
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .rightSection{
-    flex: 5;
-    background-image: url("../../../src/assets/images/bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: center;
-    align-items: center;
-    
+    flex: 3;
+   display: flex;
+   justify-content: center;
 }
 
 .logo{

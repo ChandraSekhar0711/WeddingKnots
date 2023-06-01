@@ -11,7 +11,7 @@ export function Navbar() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse justify-content-center" id="navbarNav"style={{fontSize:"20px"}} >
-                        <ul className="navbar-nav flex gap-3">
+                        <ul className="navbar-nav gap-3">
                             <li className="nav-item">
                                 <Link className="nav-link " to={'/'} >Home</Link>
                             </li>
