@@ -1,5 +1,5 @@
 .card_container{
-    width: 500px;
+    border-radius: 20px;
+    width: 550px;
     margin: 10px;
-    opacity: 1;
   }

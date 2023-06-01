@@ -1,19 +1,29 @@
 .container{
-    
+    max-width: 500px;
     transition: all 0.5s;
     border-radius: 17px;
+    
 }
 .container:hover {
     transform: scale(1.05);
   }
 .icon{
-    position: absolute;
-    bottom: 5%;
-    right:3%;
+    position: relative;
+    float: right;
     transition: all 0.5s;
     cursor: pointer;
 }
 
 .icon:hover{
+    transform: scale(1.05);
+}
+
+.icon1{
+   position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.icon1:hover{
     transform: scale(1.5);
 }

@@ -1,0 +1,28 @@
+.formContainer {
+    width: 70%;
+}
+
+.formGroup {
+  margin-top: 50px;
+}
+
+.formGroup > * {
+  margin: 15px;
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.button {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.icon{
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 15px;
+  color: #b8b8b8;
+}

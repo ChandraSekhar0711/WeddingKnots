@@ -1,13 +1,15 @@
 import s from "./style.module.css";
-export function Input({ type, onTextChange, placeholder }) {
+export function TextArea({ type, onTextChange, placeholder,name }) {
   return (
-    <input
+    <textarea
     type={type || "text"}
+    rows={15} 
+    cols={100}
+    name={name}
     className={s.input}
     onChange={(e) => onTextChange(e.target.value)}
     placeholder={placeholder}
-    required
-  />
+  ></textarea>
   );
 }
 

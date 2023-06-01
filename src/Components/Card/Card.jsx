@@ -2,28 +2,52 @@ import { Cart2 } from "react-bootstrap-icons";
 import s from "./style.module.css"
 import {
     MDBCard,
+    MDBCardImage,
+    MDBCardBody,
     MDBCardTitle,
     MDBCardText,
-    MDBCardOverlay,
-    MDBCardImage
+    MDBCardFooter,
+    MDBRow,
+    MDBCol
   } from 'mdb-react-ui-kit';
 import { useNavigate } from "react-router-dom";
+import { ButtonPrimary } from "../ButtonPrimary/ButtonPrimary";
   
 export function Card({ title, image, price, type, onCardClick }) {
     return (
         <div className={s.container}>
-            <MDBCard background='dark' className='text-white'>
-                <MDBCardImage overlay src={image} alt='...' />
-                <MDBCardOverlay>
-                    <MDBCardTitle>{title}</MDBCardTitle>
-                    <MDBCardText>Price : {price}</MDBCardText>
-                    <MDBCardText>Type : {type}</MDBCardText>
-                    <Cart2 size={"25px"} className={s.icon} onClick={onCardClick}/>
-                  
-                   
-                </MDBCardOverlay>
-                
-            </MDBCard>
+            <MDBRow className='row-cols-1 g-20'>
+      <MDBCol>
+        <MDBCard className='h-100'>
+          <MDBCardImage style={{opacity:"2"}}
+            src={image}
+            alt='...'
+            position='top'
+          />
+          <MDBCardBody>
+            <MDBCardTitle>{title}</MDBCardTitle>
+            <MDBCardText>
+              This is a longer card with supporting text below as a natural lead-in to additional content.
+              This content is a little bit longer.
+            </MDBCardText>
+          </MDBCardBody>
+          <MDBCardFooter>
+          
+          <div>
+            <ButtonPrimary className={s.icon} onClick={onCardClick}>
+            
+           Add to Cart 
+            </ButtonPrimary>
+            <Cart2 size={"30px"} className={s.icon1} />
+          </div>
+          
+          </MDBCardFooter>
+          
+        </MDBCard>
+        
+            
+      </MDBCol>
+      </MDBRow>
         </div>
     );
 }
