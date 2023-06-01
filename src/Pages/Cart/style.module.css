@@ -1,3 +1,38 @@
+@media (max-width: 768px) {
+  .formContainer {
+    height: 100vh; /* Adjust the height as needed */
+  }
+
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .formGroup > * {
+    margin: 10px;
+    width: 100%; /* Set the width to 100% to occupy the entire container */
+  }
+
+  .button {
+    margin-top: 20px;
+    width: 100%; 
+    position: relative;
+    /* Set the width to 100% to occupy the entire container */
+    float: left; /* Remove the float property for mobile */
+  }
+
+  .icon{
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 15px;
+    color: #b8b8b8;
+  }
+  
+}
+
 .root{
     
 }
@@ -19,10 +54,10 @@
 }
 
 .button {
-  margin-top: 50px;
-  width: 50%;
+  margin-top: 30px;
   position: relative;
   float: right;
+  width: auto;
 }
 
 .icon{
@@ -31,5 +66,3 @@
   margin-top: 15px;
   color: #b8b8b8;
 }
-
-

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { fake } from "../../api/fake-backend/fake"
 import s from "./style.module.css"
-import { GenderFemale, GenderMale, House, Person, Phone, PhoneFill, PhoneFlip, PhoneLandscapeFill, SortNumericDown, SortNumericUp, SortNumericUpAlt, Watch} from "react-bootstrap-icons";
+import { GenderFemale, GenderMale, House, Phone,SortNumericUpAlt, Watch} from "react-bootstrap-icons";
 import { Lock } from "react-bootstrap-icons";
 import { Input } from "../../Components/Input/Input";
 import { Link, useNavigate } from "react-router-dom";

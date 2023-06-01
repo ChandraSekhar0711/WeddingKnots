@@ -1,5 +1,7 @@
+import s from "./style.module.css"
 export function Orders(){
-    return <div className="d-flex justify-content-center">
-        <h3>Orders</h3>
-        </div>
+    return (
+        <div className={`d-flex ${s.root}`}>
+            <h3>Get Your Orders</h3>
+        </div>);
 }

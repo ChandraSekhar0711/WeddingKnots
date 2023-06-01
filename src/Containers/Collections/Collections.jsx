@@ -16,7 +16,7 @@ export function Collection() {
                         image={card.image} 
                         price={card.price} 
                         type={card.type} 
-                        onCardClick={()=>navigate('/Cart/'+ card.id)} 
+                        onCardClick={()=>navigate('/Card/'+ card.id)} 
                         />
                     </div>
                 );
