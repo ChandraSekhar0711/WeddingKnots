@@ -41,20 +41,7 @@ const fake = [
         type:"landscape",
         image:"https://mdbootstrap.com/img/new/standard/city/044.webp"
     },
-    {
-        id:7,
-        title:"KNOT7",
-        price:100,
-        type:"landscape",
-        image:"https://mdbootstrap.com/img/new/standard/city/044.webp"
-    },
-    {
-        id:8,
-        title:"KNOT8",
-        price:100,
-        type:"landscape",
-        image:"https://mdbootstrap.com/img/new/standard/city/044.webp"
-    },
+    
     
 ]
 

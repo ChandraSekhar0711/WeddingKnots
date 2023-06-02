@@ -14,29 +14,37 @@ import { ValidatorServices } from "../../Services/validator";
 export function Cart(){
     const {cardId} = useParams();
     const card = fake[cardId-1];
-    console.log(card);
+    
 
     const navigate = useNavigate();
     const [username, setUserName] = useState("");
     const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
+    const [date, setDate] = useState("");
     
     useEffect(() => {
         setTimeout(() => {
+          console.log(card);
           toast("warning", "Details Can Not Be Modified!");
-        }, 0);
-      }, []);
-
+        },);
+      });
+      console.log(date);
     const submit = (e) =>{
         e.preventDefault();
         console.log("Submit");
-        if(ValidatorServices.min(message,20)){
-            toast("error","Message is too short");
-            navigate('/ContactUs')
+        if(ValidatorServices.min(username,10)){
+          toast("error","Message is too short");
+          setTimeout(()=>{
+            navigate('/Card/'+cardId);
+          },1000)
+            
+            
         }
         else{
             toast("success","Message sent successfully");
-            navigate('/')
+            setTimeout(()=>{
+              navigate('/')
+            },2000)
+            
         }
            
         
@@ -61,7 +69,7 @@ export function Cart(){
             <div style={{ width: "100%" }}>
                 <Watch size={25} className={s.icon} />
             
-              <Input placeholder={"date"} type="datetime-local" onTextChange={setUserName} />
+              <Input placeholder={"date"} type="datetime-local" onTextChange={setDate} />
             </div>
 
             <div style={{ width: "100%" }}>
@@ -78,9 +86,10 @@ export function Cart(){
             <div style={{ width: "100%" }}>
                 <SortNumericUpAlt size={25} className={s.icon} />
               <Input placeholder={"Quantity"} type="number" onTextChange={setUserName} />
+              <span>{}</span>
             </div>
             
-            <ButtonPrimary type="submit" className={s.button}>SEND</ButtonPrimary>
+            <ButtonPrimary type="submit" className={s.button}>Submit</ButtonPrimary>
             
             
           </form>
