@@ -10,9 +10,12 @@ import {Cart} from './Pages/Cart/Cart';
 import {Orders} from './Pages/Orders/Orders';
 import {Collection} from './Containers/Collections/Collections';
 import { ContactUs } from './Pages/ContactUs/ContactUs';
+import { Provider } from 'react-redux';
+import { store } from './store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>
+    <Provider store={store}>
     <BrowserRouter>
       <Routes>
         <Route  path='/' element={<App/>}>
@@ -25,6 +28,7 @@ root.render(
           </Route>
       </Routes>
     </BrowserRouter>
+    </Provider>
   </StrictMode>
 );
 

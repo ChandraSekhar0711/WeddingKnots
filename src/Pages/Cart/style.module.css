@@ -34,7 +34,7 @@
 }
 
 .root{
-    
+    height: auto;
 }
 .formContainer {
     height:70vh
@@ -65,4 +65,8 @@
   margin-left: 25px;
   margin-top: 15px;
   color: #b8b8b8;
+}
+.price{
+  
+  background-color: black;
 }
