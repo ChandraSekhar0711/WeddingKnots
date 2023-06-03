@@ -6,11 +6,14 @@ export const orderSlice = createSlice({
     orderList: [],
   },
   reducers: {
-    setOrderList: (state, action) => {
-      state.orderList = action.payload;
+    setOrderList: (currentSlice, action) => {
+      currentSlice.orderList = action.payload;
+    },
+    createOrder: (currentSlice, action) => {
+      currentSlice.orderList.push(action.payload);
     },
   },
 });
 
-export const { setOrderList } = orderSlice.actions;
+export const { setOrderList,createOrder } = orderSlice.actions;
 export const orderReducer = orderSlice.reducer;

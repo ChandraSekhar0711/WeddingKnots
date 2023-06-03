@@ -17,6 +17,7 @@ export function Collection() {
                         price={card.price} 
                         type={card.type} 
                         onCardClick={()=>navigate('/Card/'+ card.id)} 
+                        
                         />
                     </div>
                 );

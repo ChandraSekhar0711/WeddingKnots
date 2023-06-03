@@ -8,12 +8,16 @@ import { ButtonPrimary } from "../../Components/ButtonPrimary/ButtonPrimary";
 import { useEffect, useState } from "react";
 import { toast } from "../../Services/SweetAlert";
 import { ValidatorServices } from "../../Services/validator";
+import { OrderAPI } from "../../api/fake-orders";
+import { useDispatch } from "react-redux";
+import { createOrder } from "../../store/orders/order-slice";
 
 export function Cart() {
   const { cardId } = useParams();
   const card = fake[cardId - 1];
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
@@ -24,8 +28,6 @@ export function Cart() {
     setTimeout(() => {
       toast("warning", "Details Can Not Be Modified!");
     }, []);
-
-    
   }, []);
 
   useEffect(() =>{
@@ -38,9 +40,12 @@ export function Cart() {
 
     calculateTotalPrice();
   },[quantity]);
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-    console.log("Submit");
+    alert(JSON.stringify({title:username}));
+    const createOrders = await OrderAPI.createOrder({title:username,orderd_at:new Date().toLocaleDateString()});
+    dispatch(createOrder(createOrders));
+
     if (ValidatorServices.min(username, 10)) {
       toast("error", "Message is too short");
       setTimeout(() => {
@@ -69,7 +74,7 @@ export function Cart() {
 
         <div style={{ width: "100%" }}>
           <GenderFemale size={25} className={s.icon} />
-          <Input placeholder={"Bride Name"} type="text" onTextChange={setUserName} />
+          <Input placeholder={"Bride Name"} type="text" onTextChange={setDate} />
         </div>
 
         <div style={{ width: "100%" }}>
@@ -79,12 +84,12 @@ export function Cart() {
 
         <div style={{ width: "100%" }}>
           <House size={25} className={s.icon} />
-          <Input placeholder={"Venue"} type="text" onTextChange={setUserName} />
+          <Input placeholder={"Venue"} type="text" onTextChange={setDate} />
         </div>
 
         <div style={{ width: "100%" }}>
           <Phone size={25} className={s.icon} />
-          <Input placeholder={"Mobile"} type="text" onTextChange={setUserName} />
+          <Input placeholder={"Mobile"} type="text" size={"10"} onTextChange={setDate} />
         </div>
 
         <div style={{ width: "100%" }}>
