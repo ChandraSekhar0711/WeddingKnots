@@ -1,5 +1,25 @@
-.root{
-    height:80vh;
-    justify-content: center;
-    align-items: center;
+.container{
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  
+  border-radius: 20px;
+  transition: all 0.5s;
+ 
+  font-weight: bolder;
+  color: black;
+  width: 100%; /* Set the width to 100% */
+  max-width: 700px; /* Set a maximum width if needed */
+  margin-left: auto; /* Center the container horizontally */
+  margin-right: auto;
+
+}
+.container:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.container:active {
+  transform: scale(0.95);
 }

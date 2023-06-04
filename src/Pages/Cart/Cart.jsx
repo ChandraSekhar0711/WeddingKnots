@@ -18,9 +18,11 @@ export function Cart() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [username, setUserName] = useState("");
-  const [email, setEmail] = useState("");
+  const [groomName, setGroomName] = useState("");
+  const [brideName, setBrideName] = useState("");
   const [date, setDate] = useState("");
+  const [venue,setVenue] = useState("");
+  const [mobile, setMobile] = useState("");
   const [quantity, setQuantity] = useState("");
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -42,11 +44,22 @@ export function Cart() {
   },[quantity]);
   const submit = async (e) => {
     e.preventDefault();
-    alert(JSON.stringify({title:username}));
-    const createOrders = await OrderAPI.createOrder({title:username,orderd_at:new Date().toLocaleDateString()});
+    const data = {
+      designName:card.title,
+      Groom:groomName,
+      Bride:brideName,
+      Venue:venue,
+      Date:date,
+      Contact:mobile,
+      Quantity:quantity,
+      price:totalPrice,
+      image_src: card.image,
+      orderd_at:new Date().toLocaleDateString()};
+    //alert(JSON.stringify({title:username}));
+    const createOrders = await OrderAPI.createOrder(data);
     dispatch(createOrder(createOrders));
 
-    if (ValidatorServices.min(username, 10)) {
+    if (ValidatorServices.min(groomName, 10)) {
       toast("error", "Message is too short");
       setTimeout(() => {
         navigate("/Card/" + cardId);
@@ -54,7 +67,7 @@ export function Cart() {
     } else {
       toast("success", "Details have been submitted successfully");
       setTimeout(() => {
-        navigate("/");
+        navigate("/Orders");
       }, 2000);
     }
   };
@@ -69,12 +82,12 @@ export function Cart() {
       <form onSubmit={submit} className={s.formGroup}>
         <div style={{ width: "100%" }}>
           <GenderMale size={25} className={s.icon} />
-          <Input placeholder={"Groom Name"} type="text" onTextChange={setUserName} />
+          <Input placeholder={"Groom Name"} type="text" onTextChange={setGroomName} />
         </div>
 
         <div style={{ width: "100%" }}>
           <GenderFemale size={25} className={s.icon} />
-          <Input placeholder={"Bride Name"} type="text" onTextChange={setDate} />
+          <Input placeholder={"Bride Name"} type="text" onTextChange={setBrideName} />
         </div>
 
         <div style={{ width: "100%" }}>
@@ -84,12 +97,12 @@ export function Cart() {
 
         <div style={{ width: "100%" }}>
           <House size={25} className={s.icon} />
-          <Input placeholder={"Venue"} type="text" onTextChange={setDate} />
+          <Input placeholder={"Venue"} type="text" onTextChange={setVenue} />
         </div>
 
         <div style={{ width: "100%" }}>
           <Phone size={25} className={s.icon} />
-          <Input placeholder={"Mobile"} type="text" size={"10"} onTextChange={setDate} />
+          <Input placeholder={"Mobile"} type="text" size={"10"} onTextChange={setMobile} />
         </div>
 
         <div style={{ width: "100%" }}>

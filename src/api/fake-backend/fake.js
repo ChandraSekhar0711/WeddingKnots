@@ -9,14 +9,14 @@ const fake = [
     {
         id:2,
         title:"KNOT2",
-        price:100,
+        price:50,
         type:"landscape",
         image:"https://mdbootstrap.com/img/new/standard/city/044.webp"
     },
     {
         id:3,
         title:"KNOT3",
-        price:100,
+        price:150,
         type:"landscape",
         image:"https://mdbootstrap.com/img/new/standard/city/044.webp"
     },
@@ -30,14 +30,14 @@ const fake = [
     {
         id:5,
         title:"KNOT5",
-        price:100,
+        price:200,
         type:"landscape",
         image:"https://mdbootstrap.com/img/new/standard/city/044.webp"
     },
     {
         id:6,
         title:"KNOT6",
-        price:100,
+        price:150,
         type:"landscape",
         image:"https://mdbootstrap.com/img/new/standard/city/044.webp"
     },

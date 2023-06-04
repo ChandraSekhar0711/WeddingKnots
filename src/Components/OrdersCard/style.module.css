@@ -1,0 +1,20 @@
+.container{
+  max-width: auto;
+  transition: all 0.5s;
+  border-radius: 20px;
+  
+}
+.container:hover {
+  transform: scale(1.05);
+}
+.icon{
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.icon:hover{
+  transform: scale(1.05);
+}

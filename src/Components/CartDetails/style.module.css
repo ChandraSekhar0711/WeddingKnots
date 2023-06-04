@@ -1,0 +1,8 @@
+.root{
+    background-color: #f8f9fb;
+  }
+  .card_container{
+      border-radius: 20px;
+      width: 400px;
+      margin: 10px;
+    }

@@ -9,4 +9,7 @@ export class OrderAPI{
     static async fetchAll(){
         return (await axios.get(`${BASE_URL}`)).data;
     }
+    static async deleteById(orderId) {
+        return (await axios.delete(`${BASE_URL}/${orderId}`)).data;
+      }
 }

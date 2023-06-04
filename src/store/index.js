@@ -3,6 +3,6 @@ import { orderReducer } from "./orders/order-slice";
 
 export const store = configureStore({
   reducer: {
-    ordersSlice: orderReducer,
+    orderSlice: orderReducer,
   },
 });

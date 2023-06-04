@@ -19,7 +19,7 @@ export function Card({ title, image, price, type, onCardClick }) {
       <MDBRow className='row-cols-1 g-20'>
         <MDBCol>
           <MDBCard className='h-100'>
-            <MDBCardImage style={{ opacity: "10" }}
+            <MDBCardImage style={{ opacity: "1.5" }}
               src={image}
               alt='...'
               position='top'
