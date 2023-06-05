@@ -56,22 +56,20 @@ export function Cart() {
       image_src: card.image,
       orderd_at:new Date().toLocaleDateString()};
     //alert(JSON.stringify({title:username}));
-    const createOrders = await OrderAPI.createOrder(data);
-    dispatch(createOrder(createOrders));
-
-    if (ValidatorServices.min(groomName, 10)) {
-      toast("error", "Message is too short");
-      setTimeout(() => {
-        navigate("/Card/" + cardId);
-      }, 1000);
-    } else {
-      toast("success", "Details have been submitted successfully");
+    try{
+      const createOrders = await OrderAPI.createOrder(data);
+      dispatch(createOrder(createOrders));
+      toast("success", "Order have been submitted successfully");
       setTimeout(() => {
         navigate("/Orders");
       }, 2000);
-    }
-  };
 
+    }catch(err){
+      toast("error", "Unable to create order");
+    }
+    
+
+  }
   const form = (
     <div className={s.formContainer}>
       <h2 className={s.title}>

@@ -1,11 +1,16 @@
 import axios from "axios";
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, getDocs, orderBy, query } from "firebase/firestore";
 import { FirebaseApp } from "../Services/firebase";
 
 //const BASE_URL = "http://localhost:3200/orders";
 
 export class OrderAPI{
     static async createOrder(card){
+      const rersponse = await addDoc(collection(FirebaseApp.db,"orders"), card);
+    return {
+      id: rersponse.id,
+      ...card,
+    }
         //return (await axios.post(`${BASE_URL}`,card)).data;
     }
     static async fetchAll(){
@@ -25,6 +30,6 @@ export class OrderAPI{
         //return (await axios.get(`${BASE_URL}`)).data;
     }
     static async deleteById(orderId) {
-       // return (await axios.delete(`${BASE_URL}/${orderId}`)).data;
+      await deleteDoc(doc(FirebaseApp.db, "orders", orderId));
       }
 }
