@@ -1,58 +1,54 @@
-.root{
-    display: flex;
-    height: 100%;
-    background-image: url("../../../src/assets/images/bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: center;
-    align-items: center;
-   
-}
-.logoTop{
-    fill: #0d6efd;
-    height: 30px;
-    width: 30px;
-    margin-right: 20px;
-}
-.logoTitle{
-    font-size: 20px;
-    margin: 0;
-    padding-top: 4px;
-    text-align: center;
-}
-.header{
-    display: flex;
-    position: absolute;
-    top: 3%;
-    left: 3%;
-}
 
-.leftSection{
+.contactSection {
     padding: 20px;
-    flex: 4;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    border-radius: 20px;
+    transition: all 0.5s;
+    font-weight: bolder;
+    color: black;
+    width: 100%; /* Set the width to 100% */
+    max-width: 700px; /* Set a maximum width if needed */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto;
+    height: auto;
+
+  }
+  .contactSection:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+  
+  .contactSection:active {
+    transform: scale(0.95);
+  }
+  
+  .row{
     display: flex;
     justify-content: center;
-    align-items: center;
-   
-}
+  }
 
-.rightSection{
-    flex: 3;
-   display: flex;
-   justify-content: center;
-}
 
-.logo{
-    height: 45px;
-    width: 45px;
-    vertical-align: baseline;
+  .socialLinks {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .socialLinks a {
+    display: inline-block;
+    color: black;
+    font-size: 24px;
+  }
+  
+  .socialLinks a:hover {
+    color: #0069d9;
+  }
+  
+  .socialIcon {
+    transition: color 0.3s ease;
+  }
 
-}
-
-.title{
-    color: white;
-    margin: 0;
-    text-align: center;
-    padding-top: 4px;
-    
-}
+  .contactItem{
+    margin-bottom: 10px;
+  }
