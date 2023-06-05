@@ -12,6 +12,8 @@ import {Collection} from './Containers/Collections/Collections';
 import { ContactUs } from './Pages/ContactUs/ContactUs';
 import { Provider } from 'react-redux';
 import { store } from './store';
+import { FirebaseApp } from './Services/firebase';
+FirebaseApp.init();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>
