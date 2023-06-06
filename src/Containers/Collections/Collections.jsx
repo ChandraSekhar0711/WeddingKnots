@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Card } from "../../Components/Card/Card";
+import { Card, Cards } from "../../Components/Card/Card";
 import { fake } from "../../api/fake-backend/fake"
 import s from "./style.module.css"
 export function Collection() {
@@ -11,13 +11,13 @@ export function Collection() {
             {cards.map((card) => {
                 return (
                     <div className={s.card_container} key={card.id}>
-                        <Card 
+                        <Cards
                         title={card.title} 
                         image={card.image} 
                         price={card.price} 
                         type={card.type} 
+                        description={card.description}
                         onCardClick={()=>navigate('/Card/'+ card.id)} 
-                        
                         />
                     </div>
                 );

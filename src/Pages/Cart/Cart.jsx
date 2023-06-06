@@ -11,6 +11,7 @@ import { ValidatorServices } from "../../Services/validator";
 import { OrderAPI } from "../../api/fake-orders";
 import { useDispatch } from "react-redux";
 import { createOrder } from "../../store/orders/order-slice";
+import { AuthLayoyt } from "../../Components/AuthLayout/AuthLayout";
 
 export function Cart() {
   const { cardId } = useParams();
@@ -126,19 +127,25 @@ export function Cart() {
     </div>
   );
 
-  return (
+  return(
+    <AuthLayoyt image={card.image}>{form}</AuthLayoyt>
+  );
+  
+}
+
+/*return (
     <>
       <div
         className={`d-flex ${s.root}`}
         style={{
-          backgroundImage: `url(${card.image}})`,
+          backgroundImage: `url(${card.image})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+        
           borderRadius: "20px",
         }}
       >
         <div style={{ padding: "30px" }}>{form}</div>
       </div>
     </>
-  );
-}
+  );*/

@@ -15,7 +15,7 @@ export class OrderAPI{
     }
     static async fetchAll(){
         try {
-            const q = query(collection(FirebaseApp.db, "orders"),orderBy("orderd_at", "asc"));
+            const q = query(collection(FirebaseApp.db, "orders"),orderBy("orderd_at", "desc"));
             const querySnapshot = await getDocs(q);
             const orders = querySnapshot.docs.map((doc) => ({
               id: doc.id,
