@@ -13,7 +13,8 @@ export function CartDetails(){
     const navigte= useNavigate();
     const dispatch = useDispatch();
     function orderDelete(order){
-        if(window.confirm(`Do You really want to delete the order?`)){
+        if(window.confirm(`Do You really want to delete the order ${order.id}`)){
+            
             try{
                 OrderAPI.deleteById(order.id);
                 dispatch(deleteOrder(order));

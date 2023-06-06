@@ -11,7 +11,7 @@
   max-width: 700px; /* Set a maximum width if needed */
   margin-left: auto; /* Center the container horizontally */
   margin-right: auto;
-  background-image: radial-gradient( circle farthest-corner at 92.3% 71.5%,  rgba(83,138,214,1) 0%, rgba(134,231,214,1) 90% );
+  background-image: radial-gradient( circle farthest-corner at 92.3% 71.5%,  rgba(83,138,214,1) 0%, rgba(134,231,214,1) 90% );;
 
 }
   .container:hover {
